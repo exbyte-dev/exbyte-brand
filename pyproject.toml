@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "exbyte-brand"
+dynamic = ["version"]
+description = "Exbyte console branding: animated startup splash"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Abubakar Ismail Sadiq", email = "abubakar@exbyte.dev" }]
+dependencies = []
+
+[project.urls]
+Homepage = "https://exbyte.dev"
+Repository = "https://github.com/exbyte-dev/exbyte-brand"
+
+[project.scripts]
+exbyte-brand = "exbyte_brand.__main__:main"
+
+[tool.hatch.version]
+path = "src/exbyte_brand/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/exbyte_brand"]
